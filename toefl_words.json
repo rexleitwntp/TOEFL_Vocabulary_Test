@@ -1,0 +1,39 @@
+[
+    {
+        "word": "abandon",
+        "phonetic": "/əˈbændən/",
+        "syllables": ["ə", "ˈbæn", "dən"],
+        "correctMeaning": "vt. 放弃，遗弃；抛弃",
+        "example": "All attempts to find a peaceful solution to the conflict have now been abandoned.",
+        "exampleCn": "寻找和平解决冲突的所有尝试现在都已放弃。",
+        "distractors": ["vt. 坚持，维持", "vi. 犹豫，迟疑", "n. 支持，拥护"]
+    },
+    {
+        "word": "camouflage",
+        "phonetic": "/ˈkæməflɑːʒ/",
+        "syllables": ["ˈkæ", "mə", "flɑːʒ"],
+        "correctMeaning": "v. 伪装，掩饰；n. 伪装，掩护",
+        "example": "Many animals have been endowed with coloration that enables them to be camouflaged in their natural habitat.",
+        "exampleCn": "许多动物天生就有保护色，使它们能在自然栖息地中伪装自己。",
+        "distractors": ["v. 暴露，显露", "n. 保护，防护", "v. 模仿，效仿"]
+    },
+    {
+        "word": "ubiquitous",
+        "phonetic": "/juːˈbɪkwɪtəs/",
+        "syllables": ["juː", "ˈbɪ", "kwɪ", "təs"],
+        "correctMeaning": "adj. 普遍存在的，无处不在的",
+        "example": "Smartphones have become ubiquitous in modern society.",
+        "exampleCn": "智能手机在现代社会已经变得无处不在。",
+        "distractors": ["adj. 稀有的，罕见的", "adj. 暂时的，临时的", "adj. 昂贵的，高价的"]
+    },
+    // 这里可以添加更多托福单词...
+    {
+        "word": "ephemeral",
+        "phonetic": "/ɪˈfemərəl/",
+        "syllables": ["ɪ", "ˈfem", "ə", "rəl"],
+        "correctMeaning": "adj. 短暂的，转瞬即逝的",
+        "example": "The beauty of cherry blossoms is ephemeral but unforgettable.",
+        "exampleCn": "樱花的美是短暂的但令人难忘。",
+        "distractors": ["adj. 永恒的，永久的", "adj. 坚固的，耐用的", "adj. 明显的，显著的"]
+    }
+]
