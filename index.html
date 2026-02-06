@@ -1,0 +1,468 @@
+// 多语言配置（保持不变）
+const translations = {
+ 'zh-TW': { 
+        mainTitle: '託福單詞釋義問答測驗', 
+        mainDesc: '挑戰你的託福詞彙儲備，每次隨機10個高頻單詞，測試你的詞彙掌握程度', 
+        startBtn: '開始測試', 
+        questionText: '請選擇該單詞的正確釋義：', 
+        nextBtn: '下一個單詞', 
+        finishBtn: '完成測試', 
+        resultTitle: '測試完成！', 
+        scoreText: '你的得分是：', 
+        scoreComments: { 
+            perfect: '太棒了！ 你對這些託福單詞掌握得非常好！', 
+            excellent: '很不錯！ 你已經掌握了大部分託福單詞，繼續加油！', 
+            good: '還不錯！ 你需要多複習這些託福單詞，加強記憶！', 
+            poor: '加油！ 你需要多花時間學習託福單詞，提升詞彙量！' 
+        }, 
+        restartBtn: '重新測驗', 
+        meaningLabel: '正確釋義：', 
+        correctAnswer: '回答正確！', 
+        wrongAnswer: '回答錯誤！', 
+        browserNotSupport: '你的瀏覽器不支持語音合成功能，請使用Chrome、Edge等瀏覽器', 
+        loadingText: '正在載入單詞庫... ', 
+        loadError: '單詞庫載入失敗，請更新頁面重試' 
+
+    }, 
+ 'zh-CN': {
+        mainTitle: '托福单词释义问答测试',
+        mainDesc: '挑战你的托福词汇储备，每次随机10个高频单词，测试你的词汇掌握程度',
+        startBtn: '开始测试',
+        questionText: '请选择该单词的正确释义：',
+        nextBtn: '下一个单词',
+        finishBtn: '完成测试',
+        resultTitle: '测试完成！',
+        scoreText: '你的得分是：',
+        scoreComments: {
+            perfect: '太棒了！你对这些托福单词掌握得非常好！',
+            excellent: '很不错！你已经掌握了大部分托福单词，继续巩固！',
+            good: '还不错！你需要多复习这些托福单词，加强记忆！',
+            poor: '加油！你需要多花时间学习托福单词，提升词汇量！'
+        },
+        restartBtn: '重新测试',
+        meaningLabel: '正确释义：',
+        correctAnswer: '回答正确！',
+        wrongAnswer: '回答错误！',
+        browserNotSupport: '你的浏览器不支持语音合成功能，请使用Chrome、Edge等现代浏览器',
+        loadingText: '正在加载单词库...',
+        loadError: '单词库加载失败，请刷新页面重试'
+    },
+    'en-US': {
+        mainTitle: 'TOEFL Vocabulary Quiz',
+        mainDesc: 'Challenge your TOEFL vocabulary with 10 randomly selected high-frequency words each time',
+        startBtn: 'Start Quiz',
+        questionText: 'Choose the correct definition for this word:',
+        nextBtn: 'Next Word',
+        finishBtn: 'Finish Quiz',
+        resultTitle: 'Quiz Completed!',
+        scoreText: 'Your score is:',
+        scoreComments: {
+            perfect: 'Excellent! You have a perfect grasp of these TOEFL words!',
+            excellent: 'Great job! You have mastered most of these TOEFL words, keep practicing!',
+            good: 'Not bad! You need to review these TOEFL words more to strengthen your memory!',
+            poor: 'Keep going! You need to spend more time learning TOEFL vocabulary to improve!',
+        },
+        restartBtn: 'Restart Quiz',
+        meaningLabel: 'Correct definition:',
+        correctAnswer: 'Correct answer!',
+        wrongAnswer: 'Wrong answer!',
+        browserNotSupport: 'Your browser does not support speech synthesis. Please use Chrome, Edge or other modern browsers.',
+        loadingText: 'Loading word library...',
+        loadError: 'Failed to load word library, please refresh and try again'
+    },
+    'ja-JP': {
+        mainTitle: 'TOEFL単語の意味クイズ',
+        mainDesc: 'TOEFLの語彙力に挑戦！毎回ランダムに選ばれた10の高頻度単語で語彙力をテスト',
+        startBtn: 'クイズ開始',
+        questionText: 'この単語の正しい意味を選択してください：',
+        nextBtn: '次の単語',
+        finishBtn: 'クイズを終了',
+        resultTitle: 'クイズ完了！',
+        scoreText: 'あなたのスコア：',
+        scoreComments: {
+            perfect: '素晴らしい！これらのTOEFL単語を完璧にマスターしています！',
+            excellent: '非常に良い！これらのTOEFL単語の大部分をマスターしています、続けて練習しましょう！',
+            good: 'まあまあです！これらのTOEFL単語をもっと復習して記憶を強化する必要があります！',
+            poor: '頑張って！TOEFLの語彙を学ぶためにもっと時間を費やす必要があります！',
+        },
+        restartBtn: 'クイズを再開',
+        meaningLabel: '正しい意味：',
+        correctAnswer: '回答は正しいです！',
+        wrongAnswer: '回答は間違っています！',
+        browserNotSupport: 'お使いのブラウザは音声合成に対応していません。Chrome、Edgeなどの最新のブラウザを使用してください。',
+        loadingText: '単語ライブラリを読み込んでいます...',
+        loadError: '単語ライブラリの読み込みに失敗しました。ページを更新して再試行してください'
+    },
+    'ko-KR': {
+        mainTitle: '토플 단어 뜻 퀴즈',
+        mainDesc: '토플 어휘력에 도전하세요! 매번 무작위로 선택된 10개의 고빈도 단어로 어휘력을 테스트',
+        startBtn: '퀴즈 시작',
+        questionText: '이 단어의 올바른 뜻을 선택하세요:',
+        nextBtn: '다음 단어',
+        finishBtn: '퀴즈 완료',
+        resultTitle: '퀴즈 완료!',
+        scoreText: '당신의 점수:',
+        scoreComments: {
+            perfect: '훌륭합니다! 이 토플 단어들을 완벽하게 마스터하셨습니다!',
+            excellent: '잘 하셨습니다! 이 토플 단어들의 대부분을 마스터하셨습니다, 계속 연습하세요!',
+            good: '괜찮습니다! 이 토플 단어들을 더 복습해서 기억을 강화해야 합니다!',
+            poor: '화이팅! 토플 어휘를 배우기 위해 더 많은 시간을 투자해야 합니다!',
+        },
+        restartBtn: '퀴즈 재시작',
+        meaningLabel: '올바른 뜻:',
+        correctAnswer: '정답입니다!',
+        wrongAnswer: '오답입니다!',
+        browserNotSupport: '사용 중인 브라우저는 음성 합성을 지원하지 않습니다. Chrome, Edge 등 최신 브라우저를 사용하세요.',
+        loadingText: '단어 라이브러리를 로드하는 중...',
+        loadError: '단어 라이브러리 로드에 실패했습니다. 페이지를 새로 고침하고 다시 시도하세요'
+    }
+};
+
+// 检测用户语言（保持不变）
+function detectUserLanguage() {
+    const userLang = navigator.language || navigator.userLanguage;
+    const supportedLangs = Object.keys(translations);
+    for (const lang of supportedLangs) {
+        if (userLang.startsWith(lang.split('-')[0])) {
+            return lang;
+        }
+    }
+    return 'en-US';
+}
+
+// 应用翻译（保持不变）
+function applyTranslations(lang) {
+    const t = translations[lang];
+    
+    document.getElementById('mainTitle').textContent = t.mainTitle;
+    document.getElementById('mainDesc').textContent = t.mainDesc;
+    document.getElementById('startBtn').innerHTML = `${t.startBtn} <i class="fas fa-arrow-right ml-2"></i>`;
+    document.getElementById('resultTitle').textContent = t.resultTitle;
+    document.getElementById('scoreText').innerHTML = `${t.scoreText} <span id="score" class="text-primary font-bold">0</span>/10`;
+    document.getElementById('restartBtn').innerHTML = `${t.restartBtn} <i class="fas fa-redo ml-2"></i>`;
+    
+    window.currentTranslations = t;
+}
+
+// 初始化翻译
+const userLang = detectUserLanguage();
+applyTranslations(userLang);
+
+// 全局变量
+let selectedWords = []; // 存储随机选中的单词
+let score = 0; // 得分
+const QUIZ_COUNT = 10; // 每次测试的单词数量
+const WORD_LIBRARY_URL = 'toefl_words.json'; // 替换为你的单词库URL
+
+/**
+ * 从线上获取完整单词库
+ */
+async function fetchWordLibrary() {
+    try {
+        // 显示加载状态
+        const startBtn = document.getElementById('startBtn');
+        startBtn.disabled = true;
+        startBtn.innerHTML = `${window.currentTranslations.loadingText} <i class="fas fa-spinner fa-spin ml-2"></i>`;
+        
+        // 请求单词库
+        const response = await fetch(WORD_LIBRARY_URL);
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const fullLibrary = await response.json();
+        return fullLibrary;
+    } catch (error) {
+        console.error('加载单词库失败:', error);
+        alert(window.currentTranslations.loadError);
+        // 恢复开始按钮
+        const startBtn = document.getElementById('startBtn');
+        startBtn.disabled = false;
+        startBtn.innerHTML = `${window.currentTranslations.startBtn} <i class="fas fa-arrow-right ml-2"></i>`;
+        return [];
+    }
+}
+
+/**
+ * 从完整库中随机抽取指定数量的单词
+ * @param {Array} fullLibrary - 完整单词库
+ * @param {number} count - 要抽取的数量
+ * @returns {Array} 随机选中的单词数组
+ */
+function getRandomWords(fullLibrary, count) {
+    // 复制数组避免修改原数据
+    const shuffled = [...fullLibrary];
+    
+    // 洗牌算法（Fisher-Yates）
+    for (let i = shuffled.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    
+    // 返回前count个单词
+    return shuffled.slice(0, count);
+}
+
+/**
+ * 动态生成单词测试卡片
+ */
+function generateQuizCards() {
+    const quizContainer = document.getElementById('quizContainer');
+    quizContainer.innerHTML = ''; // 清空原有内容
+    
+    // 为每个选中的单词生成卡片
+    selectedWords.forEach((wordItem, index) => {
+        // 创建选项（正确答案+干扰项，随机排序）
+        const allOptions = [
+            { text: `C. ${wordItem.correctMeaning}`, isCorrect: true },
+            { text: `A. ${wordItem.distractors[0]}`, isCorrect: false },
+            { text: `B. ${wordItem.distractors[1]}`, isCorrect: false },
+            { text: `D. ${wordItem.distractors[2]}`, isCorrect: false }
+        ];
+        
+        // 随机排序选项
+        allOptions.sort(() => Math.random() - 0.5);
+        
+        // 构建卡片HTML
+        const cardHtml = `
+            <section class="word-card mb-8 ${index === 0 ? '' : 'hidden'}" data-index="${index}">
+                <div class="card">
+                    <h2 class="text-[clamp(1.5rem,3vw,2rem)] font-bold text-neutral-600 mb-2" id="word${index}">${wordItem.word}</h2>
+                    <div class="flex items-center mb-6">
+                        <button class="pronounce-btn" data-type="word" data-word-index="${index}" data-speed="normal" aria-label="播放单词发音">
+                            <i class="fas fa-volume-up"></i>
+                        </button>
+                        <button class="slow-btn" data-type="word" data-word-index="${index}" data-speed="slow1" aria-label="慢速播放1 (0.5x)">
+                            <i class="fas fa-forward-step"></i>
+                        </button>
+                        <button class="slow-btn" data-type="word" data-word-index="${index}" data-speed="slow2" aria-label="慢速播放2 (0.3x)">
+                            <i class="fas fa-backward-step"></i>
+                        </button>
+                        <button class="slow-btn" data-type="word" data-word-index="${index}" data-speed="slow3" aria-label="慢速播放3 (0.1x)">
+                            <i class="fas fa-step-backward"></i>
+                        </button>
+                        <p class="text-[clamp(1rem,2vw,1.2rem)] text-neutral-400" id="phonetic${index}">
+                            <span class="phonetic-slash">/</span>
+                            <span class="phonetic-content">${wordItem.phonetic.replace(/\//g, '')}</span>
+                            <span class="phonetic-slash">/</span>
+                        </p>
+                    </div>
+                    <h3 class="text-[clamp(1.2rem,2.5vw,1.4rem)] font-medium mb-4">${window.currentTranslations.questionText}</h3>
+                    <div class="space-y-3 mb-6" id="optionsContainer${index}">
+                        ${allOptions.map((option, optIndex) => `
+                            <button class="option-btn" data-answer="${option.isCorrect}" data-word="${index}" data-opt-index="${optIndex}">
+                                ${option.text}
+                            </button>
+                        `).join('')}
+                    </div>
+                    <div id="result${index}" class="hidden p-4 rounded-lg mb-4"></div>
+                    <div id="explanation${index}" class="hidden bg-neutral-100 p-4 rounded-lg">
+                        <p class="font-medium mb-2">${window.currentTranslations.meaningLabel} <span id="meaning${index}">${wordItem.correctMeaning}</span></p>
+                        <div class="flex items-start mb-2">
+                            <button class="pronounce-btn mt-1 mr-3 flex-shrink-0" data-type="example" data-word-index="${index}" data-speed="normal" aria-label="播放例句发音">
+                                <i class="fas fa-volume-up"></i>
+                            </button>
+                            <button class="slow-btn mt-1 mr-3 flex-shrink-0" data-type="example" data-word-index="${index}" data-speed="slow1" aria-label="慢速播放1 (0.5x)">
+                                <i class="fas fa-forward-step"></i>
+                            </button>
+                            <button class="slow-btn mt-1 mr-3 flex-shrink-0" data-type="example" data-word-index="${index}" data-speed="slow2" aria-label="慢速播放2 (0.3x)">
+                                <i class="fas fa-backward-step"></i>
+                            </button>
+                            <button class="slow-btn mt-1 mr-3 flex-shrink-0" data-type="example" data-word-index="${index}" data-speed="slow3" aria-label="慢速播放3 (0.1x)">
+                                <i class="fas fa-step-backward"></i>
+                            </button>
+                            <div>
+                                <p class="italic mb-1"><span id="example${index}">${wordItem.example}</span></p>
+                                <p class="text-sm text-neutral-500"><span id="exampleCn${index}">${wordItem.exampleCn}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    ${index < QUIZ_COUNT - 1 ? `
+                        <button class="next-btn bg-secondary text-white px-6 py-3 rounded-lg font-medium hidden" data-word="${index}">
+                            ${window.currentTranslations.nextBtn}
+                            <i class="fas fa-chevron-right ml-2"></i>
+                        </button>
+                    ` : `
+                        <button id="finishBtn" class="bg-secondary text-white px-6 py-3 rounded-lg font-medium hidden" data-word="${index}">
+                            ${window.currentTranslations.finishBtn}
+                            <i class="fas fa-check ml-2"></i>
+                        </button>
+                    `}
+                </div>
+            </section>
+        `;
+        
+        quizContainer.innerHTML += cardHtml;
+    });
+    
+    // 绑定事件
+    bindQuizEvents();
+}
+
+/**
+ * 绑定测试相关事件
+ */
+function bindQuizEvents() {
+    // 选项点击事件
+    document.querySelectorAll('.option-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const wordIndex = parseInt(this.dataset.word);
+            const isCorrect = this.dataset.answer === 'true';
+            const optionsContainer = document.getElementById(`optionsContainer${wordIndex}`);
+            
+            // 禁用所有选项
+            optionsContainer.querySelectorAll('.option-btn').forEach(opt => {
+                opt.disabled = true;
+                if (opt.dataset.answer === 'true') {
+                    opt.classList.add('correct');
+                } else if (opt === this && !isCorrect) {
+                    opt.classList.add('incorrect');
+                }
+            });
+            
+            // 显示结果
+            const resultEl = document.getElementById(`result${wordIndex}`);
+            resultEl.classList.remove('hidden');
+            
+            if (isCorrect) {
+                score++;
+                resultEl.className = 'p-4 rounded-lg mb-4 bg-green-50 text-green-700';
+                resultEl.innerHTML = `<i class="fas fa-check-circle mr-2"></i> ${window.currentTranslations.correctAnswer}`;
+            } else {
+                resultEl.className = 'p-4 rounded-lg mb-4 bg-red-50 text-red-700';
+                resultEl.innerHTML = `<i class="fas fa-times-circle mr-2"></i> ${window.currentTranslations.wrongAnswer}`;
+            }
+            
+            // 显示解释
+            document.getElementById(`explanation${wordIndex}`).classList.remove('hidden');
+            
+            // 显示下一个/完成按钮
+            if (wordIndex < QUIZ_COUNT - 1) {
+                document.querySelector(`.next-btn[data-word="${wordIndex}"]`).classList.remove('hidden');
+            } else {
+                document.getElementById('finishBtn').classList.remove('hidden');
+            }
+        });
+    });
+    
+    // 下一个单词按钮事件
+    document.querySelectorAll('.next-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const currentIndex = parseInt(this.dataset.word);
+            const nextIndex = currentIndex + 1;
+            
+            // 隐藏当前卡片，显示下一个
+            document.querySelector(`.word-card[data-index="${currentIndex}"]`).classList.add('hidden');
+            document.querySelector(`.word-card[data-index="${nextIndex}"]`).classList.remove('hidden');
+        });
+    });
+    
+    // 完成测试按钮事件
+    document.getElementById('finishBtn')?.addEventListener('click', showResult);
+    
+    // 发音按钮事件（保留原有逻辑，如需实现发音功能可补充）
+    document.querySelectorAll('.pronounce-btn, .slow-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            // 这里可以添加发音逻辑
+            const wordIndex = parseInt(this.dataset.wordIndex);
+            const word = selectedWords[wordIndex].word;
+            const speed = this.dataset.speed;
+            
+            // 示例：控制台输出，实际项目中替换为语音合成逻辑
+            console.log(`播放${this.dataset.type === 'word' ? '单词' : '例句'}: ${word}, 速度: ${speed}`);
+            
+            // 简单的语音合成示例（需要浏览器支持）
+            try {
+                const utterance = new SpeechSynthesisUtterance(
+                    this.dataset.type === 'word' ? word : selectedWords[wordIndex].example
+                );
+                
+                // 设置语速
+                switch(speed) {
+                    case 'slow1': utterance.rate = 0.5; break;
+                    case 'slow2': utterance.rate = 0.3; break;
+                    case 'slow3': utterance.rate = 0.1; break;
+                    default: utterance.rate = 1;
+                }
+                
+                utterance.lang = 'en-US';
+                window.speechSynthesis.speak(utterance);
+            } catch (e) {
+                alert(window.currentTranslations.browserNotSupport);
+            }
+        });
+    });
+}
+
+/**
+ * 显示测试结果
+ */
+function showResult() {
+    // 隐藏测试容器，显示结果容器
+    document.getElementById('quizContainer').classList.add('hidden');
+    document.getElementById('resultSection').classList.remove('hidden');
+    
+    // 更新得分
+    document.getElementById('score').textContent = score;
+    
+    // 更新评语
+    const scoreComment = document.getElementById('scoreComment');
+    if (score === 10) {
+        scoreComment.textContent = window.currentTranslations.scoreComments.perfect;
+    } else if (score >= 8) {
+        scoreComment.textContent = window.currentTranslations.scoreComments.excellent;
+    } else if (score >= 5) {
+        scoreComment.textContent = window.currentTranslations.scoreComments.good;
+    } else {
+        scoreComment.textContent = window.currentTranslations.scoreComments.poor;
+    }
+}
+
+/**
+ * 初始化测试
+ */
+async function initQuiz() {
+    // 重置状态
+    score = 0;
+    selectedWords = [];
+    
+    // 获取单词库
+    const fullLibrary = await fetchWordLibrary();
+    if (fullLibrary.length < QUIZ_COUNT) {
+        alert(`单词库数量不足（需要至少${QUIZ_COUNT}个单词）`);
+        const startBtn = document.getElementById('startBtn');
+        startBtn.disabled = false;
+        startBtn.innerHTML = `${window.currentTranslations.startBtn} <i class="fas fa-arrow-right ml-2"></i>`;
+        return;
+    }
+    
+    // 随机抽取单词
+    selectedWords = getRandomWords(fullLibrary, QUIZ_COUNT);
+    
+    // 生成测试卡片
+    generateQuizCards();
+    
+    // 显示测试容器，隐藏封面
+    document.getElementById('coverSection').classList.add('hidden');
+    document.getElementById('quizContainer').classList.remove('hidden');
+}
+
+/**
+ * 重新开始测试
+ */
+function restartQuiz() {
+    // 隐藏结果容器，显示封面
+    document.getElementById('resultSection').classList.add('hidden');
+    document.getElementById('coverSection').classList.remove('hidden');
+    
+    // 启用开始按钮
+    const startBtn = document.getElementById('startBtn');
+    startBtn.disabled = false;
+    startBtn.innerHTML = `${window.currentTranslations.startBtn} <i class="fas fa-arrow-right ml-2"></i>`;
+}
+
+// 绑定开始按钮事件
+document.getElementById('startBtn').addEventListener('click', initQuiz);
+
+// 绑定重新测试按钮事件
+document.getElementById('restartBtn').addEventListener('click', restartQuiz);
