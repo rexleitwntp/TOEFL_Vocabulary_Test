@@ -1,0 +1,36 @@
+END USER LICENSE AGREEMENT (EULA)
+
+IMPORTANT: PLEASE READ THIS AGREEMENT CAREFULLY BEFORE USING THIS SOFTWARE.
+
+1. Grant of License
+This software ("Application") is licensed, not sold. The developer ("Licensor") grants you ("User") a non-exclusive, non-transferable license to install and use the Application on your personal device, subject to the terms of this Agreement.
+
+2. Restrictions
+- You may not copy, modify, distribute, sell, or lease any part of the Application.
+- Reverse engineering, decompiling, or attempting to extract the source code is prohibited.
+- The Application may not be used for unlawful purposes.
+
+3. Ownership
+All rights, title, and interest in the Application remain with the Licensor. This Agreement does not transfer any intellectual property rights to the User.
+
+4. Updates
+The Licensor may provide updates or modifications to the Application. Such updates are subject to this Agreement unless otherwise specified.
+
+5. Sponsorship and Advertising
+- The Application may display advertisements or promotional content. By using the Application, you consent to the display of such content.
+- Sponsorships or donations made to support the Application do not grant ownership rights or control over the Application.
+- The Licensor reserves the right to adjust or remove advertising and sponsorship features at any time.
+
+6. Termination
+This license is effective until terminated. The Licensor may terminate this Agreement if you fail to comply with its terms. Upon termination, you must uninstall and cease all use of the Application.
+
+7. Disclaimer of Warranty
+The Application is provided "AS IS" without warranties of any kind. The Licensor does not guarantee that the Application will be error-free or uninterrupted.
+
+8. Limitation of Liability
+To the maximum extent permitted by law, the Licensor shall not be liable for any damages arising from the use or inability to use the Application.
+
+9. Governing Law
+This Agreement shall be governed by and construed in accordance with the laws of [Your Country/Region].
+
+By installing or using the Application, you agree to be bound by the terms of this Agreement.
